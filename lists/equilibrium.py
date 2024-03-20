@@ -1,9 +1,9 @@
 from prefixsum import prefix_sum
 
 
-def equilibrium_ind(li: list) -> int:
+def equilibrium_ind(a: list) -> int:
     """Returns the index value of the list where sum of left side values equals to right sides values"""
-    ps = prefix_sum(li)
+    ps = prefix_sum(a)
     print(ps)
     for i in range(len(ps)):
         if i == (ps[-1] - ps[i]) == 0:
@@ -12,6 +12,3 @@ def equilibrium_ind(li: list) -> int:
         elif ps[i - 1] == ps[-1] - ps[i]:
             return i
     return -1
-
-
-print(equilibrium_ind([0]))
