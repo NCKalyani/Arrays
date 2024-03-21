@@ -22,4 +22,17 @@ def range_sum(a: list, b: list[list]) -> list:
     return result
 
 
-# print(range_sum([1, 2, 3, 4, 5], [[0, 3], [1, 2]]))
+def ps_evn_odd(arr):
+    pse = []
+    pso = []
+    for i in range(len(arr)):
+        if i == 0:
+            pse.append(arr[0])
+            pso.append(0)
+        elif i % 2 == 0:
+            pse.append(pse[i-1]+arr[i])
+            pso.append(pso[-1])
+        else:
+            pso.append(pso[i - 1] + arr[i])
+            pse.append(pse[-1])
+    return pso, pse
