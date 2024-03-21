@@ -22,7 +22,8 @@ def range_sum(a: list, b: list[list]) -> list:
     return result
 
 
-def ps_evn_odd(arr):
+def ps_evn_odd(arr: list) -> tuple:
+    "returns odd index prefix sum in one list,even index sum in another list"
     pse = []
     pso = []
     for i in range(len(arr)):
@@ -30,9 +31,11 @@ def ps_evn_odd(arr):
             pse.append(arr[0])
             pso.append(0)
         elif i % 2 == 0:
-            pse.append(pse[i-1]+arr[i])
+            pse.append(pse[i - 1] + arr[i])
+            # repeating last element as it is
             pso.append(pso[-1])
         else:
             pso.append(pso[i - 1] + arr[i])
+            # repeating last element as it is
             pse.append(pse[-1])
     return pso, pse
