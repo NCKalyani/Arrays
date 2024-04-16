@@ -1,6 +1,6 @@
 def max_ones(a: list) -> int:
     """ Returns length of maximum sub array containing all 1's by replacing any 0 in the array"""
-    l = r = ans = max_ans = 0
+    l = r = max_ans = 0
     flag = False
     for i in range(len(a)):
         if a[i] == 0:
@@ -58,3 +58,6 @@ def max1_by_replace(a: list) -> int:
     if not flag:
         return n
     return max_ans
+
+
+
