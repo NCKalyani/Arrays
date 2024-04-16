@@ -17,7 +17,8 @@ def max_subarray(a: list) -> int:
 
 
 def sum_sub_arrays(a: list) -> int:
-    """Returns sum of all individual sub arrays"""
+    """Returns sum of all individual sub arrays """
+    # total no.of subarrays = n(n + 1) / 2
     total = 0
     for i in range(len(a)):
         presence = (i + 1) * (len(a) - i)
