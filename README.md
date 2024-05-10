@@ -1,1 +1,1 @@
-It performs the basic list rotations 
+It performs the basic array rotations 
